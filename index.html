@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Attendance Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Team Alpha</h1>
+      </div>
+      <button id="open-admin-panel" class="primary-button">Enter Admin Panel</button>
+    </header>
+
+    <main id="home-view" class="main-grid">
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>Employees</h2>
+          </div>
+          <span id="employee-count" class="badge"></span>
+        </div>
+        <div id="employee-list" class="employee-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Live Status</p>
+            <h2>Today Overview</h2>
+          </div>
+        </div>
+        <div id="progress-list" class="status-groups"></div>
+      </section>
+    </main>
+
+    <section id="employee-page" class="page-view hidden"></section>
+    <section id="admin-page" class="page-view hidden"></section>
+  </div>
+
+  <div id="leave-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card leave-modal-card">
+      <button class="close-button" id="close-leave-modal" aria-label="Close">x</button>
+      <div id="leave-modal-content"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
